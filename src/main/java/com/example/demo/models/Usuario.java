@@ -23,10 +23,23 @@ public class Usuario {
     @Column
     private String correo;
 
-    public Usuario(String nombre, String codigo, String correo) {
+    @Column
+    private String profesion;
+
+    public String getProfesion() {
+        return profesion;
+    }
+
+
+    public void setProfesion(String profesion) {
+        this.profesion = profesion;
+    }
+
+    public Usuario(String nombre, String codigo, String correo,String profesion) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.correo = correo;
+        this.profesion = profesion;
     }
 
     public Usuario() {
